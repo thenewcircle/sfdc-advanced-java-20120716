@@ -8,6 +8,9 @@ Immutability is a Big Deal!!!!!
   - Allows us to reason more easily about polymorphism
   - Solves almost all of our basic concurrency problems
 
+Object Identity
+  - implement equals() and hashCode() together
+
 Testing:
   - With JUnit, favor obnoxiously long method names
   - Only one assertion per test method, keep tests isolated
