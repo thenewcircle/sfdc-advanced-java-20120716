@@ -5,6 +5,11 @@ import java.util.NoSuchElementException;
 public class Nil<T> implements ImmutableList<T> {
 
 	@Override
+	public T get(int index) {
+		throw new IndexOutOfBoundsException();
+	}
+
+	@Override
 	public ImmutableList<T> prepend(T element) {
 		return new Cons<T>(element, this);
 	}

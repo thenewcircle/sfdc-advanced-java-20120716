@@ -10,6 +10,15 @@ public class Cons<T> implements ImmutableList<T> {
 		this.tail = tail;
 	}
 
+	
+	@Override
+	public T get(int index) {
+		return (index == 0)
+			? head
+			: tail.get(index - 1);
+	}
+
+
 	@Override
 	public ImmutableList<T> prepend(T element) {
 		return new Cons<T>(element, this);
