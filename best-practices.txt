@@ -1,15 +1,17 @@
+Immutability is a Big Deal!!!!!
+  - Allows us to reason more easily about polymorphism
+  - Solves almost all of our basic concurrency problems
+  - Allows us to have correct, consistent object identity
+
 Polymorphism:
   - Maintain Liskov Substitutability (LSP): client code's expectations
     should be maintained by subclasses.
   - Establish behavioral contracts (business requirements) through tests
   - Only inherit from immutable classes
   
-Immutability is a Big Deal!!!!!
-  - Allows us to reason more easily about polymorphism
-  - Solves almost all of our basic concurrency problems
-
 Object Identity
   - implement equals() and hashCode() together
+  - always implement them for "value classes"
 
 Testing:
   - With JUnit, favor obnoxiously long method names
