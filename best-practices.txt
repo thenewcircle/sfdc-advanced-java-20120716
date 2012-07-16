@@ -1,0 +1,13 @@
+Polymorphism:
+  - Maintain Liskov Substitutability (LSP): client code's expectations
+    should be maintained by subclasses.
+  - Establish behavioral contracts (business requirements) through tests
+  - Only inherit from immutable classes
+  
+Immutability is a Big Deal!!!!!
+  - Allows us to reason more easily about polymorphism
+  - Solves almost all of our basic concurrency problems
+
+Testing:
+  - With JUnit, favor obnoxiously long method names
+  - Only one assertion per test method, keep tests isolated

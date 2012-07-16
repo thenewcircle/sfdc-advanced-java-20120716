@@ -1,8 +1,8 @@
 package shapes;
 
 public class Rectangle {
-	private final int width;
-	private final int height;
+	private int width;
+	private int height;
 
 	public Rectangle(int width, int height) {
 		this.width = width;
@@ -16,5 +16,20 @@ public class Rectangle {
 	public int getHeight() {
 		return height;
 	}
-	
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getArea() {
+		return width * height;
+	}
+
+	public int getPerimeter() {
+		return 2 * (width + height);
+	}
 }
