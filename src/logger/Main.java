@@ -16,7 +16,9 @@ public class Main {
 						try {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {}
-						work.add(new Random().nextInt(50));
+						synchronized (work) {
+							work.add(new Random().nextInt(30));
+						}
 					}
 				}
 			};

@@ -9,6 +9,7 @@ Videos:
   https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/1.3.mov
   https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/2.1.mov
   https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/2.2.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/2.3.mov
 
 Videos from May 29-31 class:
   https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/1.1.mov
