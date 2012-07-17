@@ -3,14 +3,13 @@ package logger;
 import immutablelist.ImmutableList;
 import immutablelist.Nil;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Main {
 
 	public static void main(String[] args) {
+
 		final AtomicReference<ImmutableList<Integer>> work =
 				new AtomicReference<ImmutableList<Integer>>(new Nil<Integer>());
 
@@ -21,10 +20,12 @@ public class Main {
 						try {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {}
-						synchronized (monitor) {
-							work.add(new Random().nextInt(30));
-							monitor.notify();
-						}
+
+						ImmutableList<Integer> prev = null, next = null;
+						do {
+							prev = work.get();
+							next = prev.prepend(new Random().nextInt(30));
+						} while (!work.compareAndSet(prev, next));
 					}
 				}
 			};
@@ -34,12 +35,11 @@ public class Main {
 		Thread t = new Thread() {
 			public void run() {
 				while (true) {
-					synchronized (monitor) {
-						try {
-							monitor.wait();
-						} catch (InterruptedException e) {}
-						System.out.println(Fibonacci.fib(work.remove()));
-					}
+					ImmutableList<Integer> prev = null;
+					do {
+						prev = work.get();
+					} while (prev.isEmpty() || !work.compareAndSet(prev, prev.tail()));
+					System.out.println(Fibonacci.fib(prev.head()));
 				}
 			}
 		};
