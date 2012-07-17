@@ -1,8 +1,6 @@
 package logger;
 
-import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
@@ -25,7 +23,19 @@ public class Main {
 			t.start();
 		}
 
-		// TODO: implement a worker thread that computes fib(n) for each element in the work queue
+		Thread t = new Thread() {
+			public void run() {
+				while (true) {
+					while (work.isEmpty()) {
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e) {}
+					}
+					// DO SOMETHING
+				}
+			}
+		};
+		t.start();
 	}
 
 }
