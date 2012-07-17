@@ -9,6 +9,16 @@ public class Nil<T> implements ImmutableList<T> {
 		throw new IndexOutOfBoundsException();
 	}
 
+
+	@Override
+	public ImmutableList<T> add(int index, T element) {
+		if (index == 0)
+			return prepend(element);
+		else
+			throw new IndexOutOfBoundsException();
+	}
+
+
 	@Override
 	public ImmutableList<T> prepend(T element) {
 		return new Cons<T>(element, this);
