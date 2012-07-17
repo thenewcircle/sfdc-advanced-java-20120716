@@ -8,6 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		final Queue<Integer> work = new LinkedList<Integer>();
+		final Object monitor = new Object();
 
 		for (int i = 0; i < 10; i++) {
 			Thread t = new Thread() {
@@ -16,8 +17,9 @@ public class Main {
 						try {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {}
-						synchronized (work) {
+						synchronized (monitor) {
 							work.add(new Random().nextInt(30));
+							monitor.notify();
 						}
 					}
 				}
@@ -28,12 +30,12 @@ public class Main {
 		Thread t = new Thread() {
 			public void run() {
 				while (true) {
-					while (work.isEmpty()) {
+					synchronized (monitor) {
 						try {
-							Thread.sleep(100);
+							monitor.wait();
 						} catch (InterruptedException e) {}
+						System.out.println(Fibonacci.fib(work.remove()));
 					}
-					System.out.println(Fibonacci.fib(work.remove()));
 				}
 			}
 		};
