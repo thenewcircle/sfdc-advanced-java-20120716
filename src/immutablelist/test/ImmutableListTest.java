@@ -1,6 +1,7 @@
 package immutablelist.test;
 
 import static org.junit.Assert.assertEquals;
+import immutablelist.Function;
 import immutablelist.ImmutableList;
 import immutablelist.Nil;
 
@@ -8,15 +9,29 @@ import org.junit.Test;
 
 public class ImmutableListTest {
 
+	private static final Function<Character, Character> TO_UPPERCASE_FN =
+			new Function<Character, Character>() {
+
+				@Override
+				public Character apply(Character input) {
+					return Character.toUpperCase(input);
+				}
+		
+			};
+
 	private static final ImmutableList<Character>
 		empty = new Nil<Character>(),
-		c = empty.prepend('c'),
-		b = c.prepend('b'),
-		a = b.prepend('a');
+		abc = empty.prepend('c').prepend('b').prepend('a');
 
 	@Test
 	public void getMustWork() {
-		assertEquals('b', (char) a.get(1));
+		assertEquals('b', (char) abc.get(1));
 	}
 
+	@Test
+	public void mapToUpperCaseMustWork() {
+		ImmutableList<Character> expected = empty.prepend('C').prepend('B').prepend('A');
+		assertEquals(expected, abc.map(TO_UPPERCASE_FN));
+	}
+	
 }

@@ -9,7 +9,6 @@ public class Nil<T> implements ImmutableList<T> {
 		throw new IndexOutOfBoundsException();
 	}
 
-
 	@Override
 	public ImmutableList<T> add(int index, T element) {
 		if (index == 0)
@@ -18,6 +17,10 @@ public class Nil<T> implements ImmutableList<T> {
 			throw new IndexOutOfBoundsException();
 	}
 
+	@Override
+	public <U> ImmutableList<U> map(Function<T, U> fn) {
+		return new Nil<U>();
+	}
 
 	@Override
 	public ImmutableList<T> prepend(T element) {
@@ -39,4 +42,17 @@ public class Nil<T> implements ImmutableList<T> {
 		return true;
 	}
 
+	@Override
+	public int hashCode() {
+		return 0;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		return getClass() == obj.getClass();
+	}
 }
