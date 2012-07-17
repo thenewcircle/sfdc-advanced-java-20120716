@@ -31,7 +31,7 @@ public class Main {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {}
 					}
-					// DO SOMETHING
+					System.out.println(Fibonacci.fib(work.remove()));
 				}
 			}
 		};
