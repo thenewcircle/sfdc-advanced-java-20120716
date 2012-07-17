@@ -1,0 +1,26 @@
+Recommended:
+  Josh Bloch, "Effective Java" (http://java.sun.com/docs/books/effective)
+  Naftalin, Wadler, "Java Generics and Collections" (http://shop.oreilly.com/product/9780596527754.do)
+  http://marakana.com/s/the_ghost_in_the_virtual_machine_a_reference_to_references,556/index.html
+  
+Videos:
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/1.1.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/1.2.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/1.3.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/2.1.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120716/2.2.mov
+
+Videos from May 29-31 class:
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/1.1.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/1.2.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/1.3.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/1.4.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/2.1.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/2.2.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/2.3.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/2.4.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/3.1.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/3.2.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/3.3.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/3.4.mov
+  https://mrkn.s3.amazonaws.com/recordings/advanced-java-sfdc-20120529/3.5.mov
