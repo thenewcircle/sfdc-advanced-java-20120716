@@ -1,7 +1,5 @@
 package logger;
 
-import java.util.Random;
-
 public class Fibonacci {
 
 	public static int fib(int n) {
@@ -14,7 +12,4 @@ public class Fibonacci {
 		}
 	}
 
-	public static int randomFib() {
-		return fib(new Random().nextInt(50));
-	}
 }
