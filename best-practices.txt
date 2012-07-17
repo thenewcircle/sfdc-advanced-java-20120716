@@ -2,6 +2,7 @@ Immutability is a Big Deal!!!!!
   - Allows us to reason more easily about polymorphism
   - Solves almost all of our basic concurrency problems
   - Allows us to have correct, consistent object identity
+  - Use Immutable collections from Guava
 
 Polymorphism:
   - Maintain Liskov Substitutability (LSP): client code's expectations
