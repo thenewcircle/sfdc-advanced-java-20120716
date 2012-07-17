@@ -26,7 +26,7 @@ public class Cons<T> implements ImmutableList<T> {
 	}
 
 	@Override
-	public <U> ImmutableList<U> map(Function<T, U> fn) {
+	public <U> ImmutableList<U> map(Function<? super T, ? extends U> fn) {
 		return tail.map(fn).prepend(fn.apply(head));
 	}
 

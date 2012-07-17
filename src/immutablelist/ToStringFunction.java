@@ -1,9 +1,9 @@
 package immutablelist;
 
-public class ToStringFunction<T> implements Function<T, String> {
+public class ToStringFunction implements Function<Object, String> {
 
 	@Override
-	public String apply(T input) {
+	public String apply(Object input) {
 		return input.toString();
 	}
 

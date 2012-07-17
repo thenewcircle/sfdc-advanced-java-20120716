@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import immutablelist.Function;
 import immutablelist.ImmutableList;
 import immutablelist.Nil;
+import immutablelist.ToStringFunction;
 
 import org.junit.Test;
 
@@ -32,6 +33,12 @@ public class ImmutableListTest {
 	public void mapToUpperCaseMustWork() {
 		ImmutableList<Character> expected = empty.prepend('C').prepend('B').prepend('A');
 		assertEquals(expected, abc.map(TO_UPPERCASE_FN));
+	}
+
+	@Test
+	public void mapToStringsMustWork() {
+		ImmutableList<String> expected = new Nil<String>().prepend("c").prepend("b").prepend("a");
+		assertEquals(expected, abc.map(new ToStringFunction()));
 	}
 	
 }

@@ -18,7 +18,7 @@ public class Nil<T> implements ImmutableList<T> {
 	}
 
 	@Override
-	public <U> ImmutableList<U> map(Function<T, U> fn) {
+	public <U> ImmutableList<U> map(Function<? super T, ? extends U> fn) {
 		return new Nil<U>();
 	}
 
