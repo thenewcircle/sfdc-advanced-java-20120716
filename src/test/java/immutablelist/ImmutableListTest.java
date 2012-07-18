@@ -1,4 +1,4 @@
-package immutablelist.test;
+package immutablelist;
 
 import static org.junit.Assert.assertEquals;
 import immutablelist.Function;

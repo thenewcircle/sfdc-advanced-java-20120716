@@ -1,4 +1,4 @@
-package shapes.test;
+package shapes;
 
 import static junit.framework.Assert.assertEquals;
 
