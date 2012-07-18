@@ -17,25 +17,11 @@ public class Calculator {
 	}
 
 	public static boolean parseOperator(String token, Stack<Integer> stack) {
-		if (token.length() != 1)
-			return false;
-		Operator op;
-		switch (token.charAt(0)) {		
-		case '+':
-			op = Operator.ADD;
-			break;
-		case '-':
-			op = Operator.SUBTRACT;
-			break;
-		case '*':
-			op = Operator.MULTIPLY;
-			break;
-		case '/':
-			op = Operator.DIVIDE;
-			break;
-		default:
+		Operator op = Operator.parse(token);
+		if (op == null) {
 			return false;
 		}
+
 		int rhs = stack.pop(), lhs = stack.pop();
 		stack.push(op.apply(lhs, rhs));
 		return true;
