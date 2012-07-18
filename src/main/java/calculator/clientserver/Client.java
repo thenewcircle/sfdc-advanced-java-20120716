@@ -1,4 +1,4 @@
-package calculator;
+package calculator.clientserver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,8 @@ import java.io.ObjectInputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
 import java.net.Socket;
+
+import calculator.Expression;
 
 public class Client {
 

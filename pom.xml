@@ -24,13 +24,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-server</artifactId>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-simple-server</artifactId>
 			<version>1.13</version>
 		</dependency>
 		<dependency>
-			<groupId>com.sun.jersey.contribs</groupId>
-			<artifactId>jersey-simple-server</artifactId>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
 			<version>1.13</version>
 		</dependency>
 		<dependency>
