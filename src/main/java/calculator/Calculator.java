@@ -19,30 +19,26 @@ public class Calculator {
 	public static boolean parseOperator(String token, Stack<Integer> stack) {
 		if (token.length() != 1)
 			return false;
-		switch (token.charAt(0)) {
-		case '+': {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs + rhs);
-			return true;
-		}
-		case '-': {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs - rhs);
-			return true;
-		}
-		case '*': {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs * rhs);
-			return true;
-		}
-		case '/': {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs / rhs);
-			return true;
-		}
+		Operator op;
+		switch (token.charAt(0)) {		
+		case '+':
+			op = Operator.ADD;
+			break;
+		case '-':
+			op = Operator.SUBTRACT;
+			break;
+		case '*':
+			op = Operator.MULTIPLY;
+			break;
+		case '/':
+			op = Operator.DIVIDE;
+			break;
 		default:
 			return false;
 		}
+		int rhs = stack.pop(), lhs = stack.pop();
+		stack.push(op.apply(lhs, rhs));
+		return true;
 	}
 
 	public static int evaluate(String expression) {
