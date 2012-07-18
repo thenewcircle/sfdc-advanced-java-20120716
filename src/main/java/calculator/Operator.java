@@ -1,9 +1,10 @@
 package calculator;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum Operator {
+public enum Operator implements Serializable {
 	ADD {
 		public int apply(int lhs, int rhs) {
 			return lhs + rhs;

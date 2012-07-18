@@ -2,6 +2,7 @@ package calculator;
 
 public final class OperationExpression implements Expression {
 
+	private static final long serialVersionUID = 1L;
 	private final Operator op;
 	private final Expression lhs, rhs;
 

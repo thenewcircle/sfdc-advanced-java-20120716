@@ -2,6 +2,7 @@ package calculator;
 
 public final class NumberExpression implements Expression {
 
+	private static final long serialVersionUID = 1L;
 	private final int number;
 
 	public NumberExpression(int number) {
