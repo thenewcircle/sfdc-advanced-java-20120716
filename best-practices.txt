@@ -14,6 +14,11 @@ Object Identity
   - implement equals() and hashCode() together
   - always implement them for "value classes"
 
+Concurrency
+  - model as many concurrency problems as possible, as Producer/Consumer problems
+  - implement Producer/Consumer pattern using BlockingQueue interface
+  - avoid explicit synchronization at all costs!!!!
+
 Testing:
   - With JUnit, favor obnoxiously long method names
   - Only one assertion per test method, keep tests isolated
